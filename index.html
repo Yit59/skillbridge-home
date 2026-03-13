@@ -1,125 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SkillBridge</title>
-  <meta name="description" content="SkillBridge is a simple platform for exchanging skills through mutual matching." />
-  <meta name="robots" content="index, follow" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<title>SkillBridge</title>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
-    }
+<style>
 
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      background-image: url("Background.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-    }
+*{
+box-sizing:border-box;
+}
 
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.35);
-    }
+body{
+margin:0;
+font-family:Arial, sans-serif;
+scroll-behavior:smooth;
+}
 
-    .logo {
-      position: absolute;
-      top: 24px;
-      left: 24px;
-      width: 68px;
-      height: 68px;
-      object-fit: contain;
-      z-index: 2;
-      background: rgba(255, 255, 255, 0.92);
-      border-radius: 18px;
-      padding: 8px;
-    }
+/* NAVBAR */
 
-    .content {
-      position: relative;
-      z-index: 2;
-      max-width: 760px;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.28);
-      padding: 40px 28px;
-      border-radius: 24px;
-      backdrop-filter: blur(2px);
-    }
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:rgba(0,0,0,0.55);
+color:white;
+z-index:10;
+}
 
-    h1 {
-      margin: 0 0 16px;
-      font-size: 54px;
-      line-height: 1.1;
-    }
+.nav-left{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:bold;
+font-size:20px;
+}
 
-    .subtitle {
-      margin: 0 0 14px;
-      font-size: 22px;
-      line-height: 1.6;
-    }
+.nav-left img{
+width:40px;
+}
 
-    .text {
-      margin: 0;
-      font-size: 18px;
-      line-height: 1.7;
-      opacity: 0.95;
-    }
+.nav-links a{
+margin-left:25px;
+color:white;
+text-decoration:none;
+font-size:16px;
+}
 
-    @media (max-width: 768px) {
-      .logo {
-        width: 56px;
-        height: 56px;
-        top: 18px;
-        left: 18px;
-      }
+/* HERO */
 
-      .content {
-        padding: 30px 20px;
-      }
+.hero{
+height:100vh;
+background-image:url("Background.png");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:120px 60px 60px 60px;
+color:white;
+}
 
-      h1 {
-        font-size: 38px;
-      }
+.overlay{
+background:rgba(0,0,0,0.45);
+padding:50px;
+border-radius:20px;
+max-width:720px;
+}
 
-      .subtitle {
-        font-size: 18px;
-      }
+h1{
+font-size:60px;
+margin-bottom:20px;
+}
 
-      .text {
-        font-size: 16px;
-      }
-    }
-  </style>
+p{
+font-size:20px;
+line-height:1.7;
+margin-bottom:18px;
+}
+
+/* BUTTONS */
+
+.buttons{
+margin-top:30px;
+display:flex;
+gap:20px;
+}
+
+.btn{
+background:white;
+color:black;
+padding:14px 24px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* SECTIONS */
+
+.section{
+padding:100px 40px;
+background:white;
+color:#222;
+text-align:center;
+}
+
+.section h2{
+font-size:40px;
+margin-bottom:30px;
+}
+
+.section p{
+max-width:700px;
+margin:auto;
+margin-bottom:20px;
+}
+
+.back{
+margin-top:40px;
+display:inline-block;
+padding:12px 20px;
+background:#111;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+</style>
 </head>
+
 <body>
-  <section class="hero">
-    <div class="overlay"></div>
 
-    <img src="5709icon.png" alt="SkillBridge icon" class="logo" />
+<!-- NAVBAR -->
 
-    <div class="content">
-      <h1>SkillBridge</h1>
-      <p class="subtitle">Exchange skills through mutual matching.</p>
-      <p class="text">
-        Learn what others know. Teach what you love. Connect with people through
-        meaningful skill exchange, online or in person.
-      </p>
-    </div>
-  </section>
+<div class="navbar">
+
+<div class="nav-left">
+<img src="5709icon.png">
+SkillBridge
+</div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#download">Download</a>
+</div>
+
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="overlay">
+
+<h1>Exchange your skills with SkillBridge!</h1>
+
+<p>
+You have a skill to share.
+Maybe you can teach yoga, photography, calligraphy, music, or even a new language.
+And maybe there is something new you have always wanted to learn.
+</p>
+
+<p>
+Want to dance? Learn an instrument?
+Practise a language?
+Discover a new hobby through someone else's knowledge.
+</p>
+
+<p>
+SkillBridge makes it easier to connect with people through skill exchange.
+Teach what you know, learn what you love, and build meaningful connections.
+Online or in person — your next match starts here.
+</p>
+
+<div class="buttons">
+
+<a href="#download" class="btn">Download</a>
+
+<a href="#about" class="btn">Learn More</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+<h2>About SkillBridge</h2>
+
+<p>
+SkillBridge connects people who want to learn a skill with people who can teach it.
+Instead of endless chatting, users match through real knowledge exchange.
+</p>
+
+<p>
+Whether it is photography, languages, coding, music or cooking,
+SkillBridge helps you teach what you know and learn something new.
+</p>
+
+<a href="#home" class="back">Back to Home</a>
+
+</section>
+
+
+<!-- DOWNLOAD -->
+
+<section class="section" id="download">
+
+<h2>Ready to start your SkillBridge journey?</h2>
+
+<p>
+Download the app and start exchanging skills today.
+</p>
+
+<div class="buttons" style="justify-content:center">
+
+<a href="#home" class="btn">App Store</a>
+
+<a href="#home" class="btn">Google Play</a>
+
+</div>
+
+<a href="#home" class="back">Back to Home</a>
+
+</section>
+
+
 </body>
 </html>
