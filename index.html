@@ -1,75 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillBridge</title>
+  <meta name="description" content="SkillBridge is a simple platform for exchanging skills through mutual matching." />
+  <meta name="robots" content="index, follow" />
 
-<title>SkillBridge</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
 
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-}
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background-image: url("Background.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
 
-/* 背景图 */
-.hero{
-  height:100vh;
-  background-image:url("background.png");
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-}
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+    }
 
-/* 中间文字 */
-.hero-text{
-  background:rgba(0,0,0,0.4);
-  padding:40px;
-  border-radius:20px;
-}
+    .logo {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      width: 68px;
+      height: 68px;
+      object-fit: contain;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 18px;
+      padding: 8px;
+    }
 
-h1{
-  font-size:48px;
-  margin-bottom:10px;
-}
+    .content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.28);
+      padding: 40px 28px;
+      border-radius: 24px;
+      backdrop-filter: blur(2px);
+    }
 
-p{
-  font-size:20px;
-}
+    h1 {
+      margin: 0 0 16px;
+      font-size: 54px;
+      line-height: 1.1;
+    }
 
-/* icon */
-.logo{
-  position:absolute;
-  top:30px;
-  left:30px;
-  width:60px;
-}
+    .subtitle {
+      margin: 0 0 14px;
+      font-size: 22px;
+      line-height: 1.6;
+    }
 
-</style>
+    .text {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.7;
+      opacity: 0.95;
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        width: 56px;
+        height: 56px;
+        top: 18px;
+        left: 18px;
+      }
+
+      .content {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      .text {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <section class="hero">
+    <div class="overlay"></div>
 
-<img src="5709icon.png" class="logo">
+    <img src="5709icon.png" alt="SkillBridge icon" class="logo" />
 
-<div class="hero">
-
-<div class="hero-text">
-
-<h1>SkillBridge</h1>
-
-<p>Exchange skills through mutual matching.</p>
-
-<p>Learn what others know. Teach what you love.</p>
-
-</div>
-
-</div>
-
+    <div class="content">
+      <h1>SkillBridge</h1>
+      <p class="subtitle">Exchange skills through mutual matching.</p>
+      <p class="text">
+        Learn what others know. Teach what you love. Connect with people through
+        meaningful skill exchange, online or in person.
+      </p>
+    </div>
+  </section>
 </body>
 </html>
