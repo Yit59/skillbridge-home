@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillBridge</title>
-  <meta name="description" content="SkillBridge is a simple platform for skill exchange.">
-  <meta name="robots" content="index, follow">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f6f8fc;
-      color: #222;
-      text-align: center;
-      padding: 80px 20px;
-    }
-    .box {
-      max-width: 700px;
-      margin: 0 auto;
-      background: white;
-      border-radius: 20px;
-      padding: 50px 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-    h1 {
-      font-size: 48px;
-      margin-bottom: 16px;
-    }
-    p {
-      font-size: 20px;
-      line-height: 1.6;
-      margin: 12px 0;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SkillBridge</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+}
+
+/* 背景图 */
+.hero{
+  height:100vh;
+  background-image:url("background.png");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+}
+
+/* 中间文字 */
+.hero-text{
+  background:rgba(0,0,0,0.4);
+  padding:40px;
+  border-radius:20px;
+}
+
+h1{
+  font-size:48px;
+  margin-bottom:10px;
+}
+
+p{
+  font-size:20px;
+}
+
+/* icon */
+.logo{
+  position:absolute;
+  top:30px;
+  left:30px;
+  width:60px;
+}
+
+</style>
 </head>
+
 <body>
-  <div class="box">
-    <h1>SkillBridge</h1>
-    <p>A simple platform where people exchange skills through mutual matching.</p>
-    <p>Learn what others know. Teach what you love.</p>
-  </div>
+
+<img src="5709icon.png" class="logo">
+
+<div class="hero">
+
+<div class="hero-text">
+
+<h1>SkillBridge</h1>
+
+<p>Exchange skills through mutual matching.</p>
+
+<p>Learn what others know. Teach what you love.</p>
+
+</div>
+
+</div>
+
 </body>
 </html>
