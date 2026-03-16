@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SkillBridge Team</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f5f5f5;
+}
+
+/* navbar */
+
+.navbar{
+background:white;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar a{
+text-decoration:none;
+color:#333;
+margin-left:30px;
+font-weight:600;
+}
+
+/* title */
+
+.title{
+text-align:center;
+margin:80px 0;
+font-size:40px;
+}
+
+/* grid */
+
+.team{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+padding:40px;
+}
+
+/* card */
+
+.member{
+background:white;
+padding:30px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+transition:transform 0.3s;
+}
+
+.member:hover{
+transform:translateY(-8px);
+}
+
+.member img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:20px;
+}
+
+.member h3{
+margin:10px 0 5px 0;
+}
+
+.role{
+color:#777;
+font-size:14px;
+margin-bottom:10px;
+}
+
+.desc{
+font-size:14px;
+color:#555;
+line-height:1.5;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<div><strong>SkillBridge</strong></div>
+<div>
+<a href="index.html">Home</a>
+<a href="team.html">Team</a>
+</div>
+</div>
+
+<h1 class="title">Meet the Team</h1>
+
+<div class="team">
+
+<div class="member">
+<img src="member1.jpg">
+<h3>Hao Xiong</h3>
+<div class="role">CEO (Project Lead)</div>
+<div class="desc">
+Strategic analysis, business development and project coordination.
+</div>
+</div>
+
+<div class="member">
+<img src="member2.jpg">
+<h3>Yi Tan</h3>
+<div class="role">Product Manager</div>
+<div class="desc">
+Technology platform development and security.
+</div>
+</div>
+
+<div class="member">
+<img src="member3.jpg">
+<h3>Ying Huang</h3>
+<div class="role">Communications Director</div>
+<div class="desc">
+Copywriting, news release and official document drafting.
+</div>
+</div>
+
+<div class="member">
+<img src="member4.jpg">
+<h3>Qiaoyun Luo</h3>
+<div class="role">Strategy Manager</div>
+<div class="desc">
+Long-term company planning, market size forecasting and revenue growth strategy.
+</div>
+</div>
+
+<div class="member">
+<img src="member5.jpg">
+<h3>Hanqing Dai</h3>
+<div class="role">Product & Community Manager</div>
+<div class="desc">
+Platform feature design, UX design, user management and community engagement.
+</div>
+</div>
+
+<div class="member">
+<img src="member6.jpg">
+<h3>Xuanxuan Wu</h3>
+<div class="role">Market Manager</div>
+<div class="desc">
+Data analysis, market analysis and competitor comparison.
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
