@@ -61,53 +61,60 @@
 
     .hero p {
       margin: 16px auto 0;
-      max-width: 720px;
+      max-width: 760px;
       font-size: 18px;
       line-height: 1.7;
       color: #666;
     }
 
-    .team-list {
-      max-width: 1000px;
-      margin: 40px auto 80px;
+    .team-grid {
+      max-width: 1200px;
+      margin: 30px auto 80px;
       padding: 0 24px;
-    }
-
-    .member {
-      display: flex;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 28px;
-      background: white;
-      border-radius: 18px;
-      padding: 28px 32px;
-      margin-bottom: 22px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     }
 
-    .member img {
+    .member-card {
+      background: white;
+      border-radius: 20px;
+      padding: 32px 26px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .member-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+    }
+
+    .member-card img {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      flex-shrink: 0;
+      margin-bottom: 20px;
     }
 
-    .member-info h3 {
+    .member-card h3 {
       margin: 0 0 8px;
-      font-size: 30px;
+      font-size: 28px;
+      line-height: 1.2;
     }
 
     .role {
-      margin: 0 0 12px;
-      font-size: 18px;
-      font-weight: 700;
-      color: #ff8a00;
+      margin: 0 0 16px;
+      font-size: 17px;
+      font-weight: 600;
+      color: #555;
     }
 
     .desc {
       margin: 0;
-      font-size: 18px;
-      line-height: 1.8;
+      font-size: 16px;
+      line-height: 1.7;
       color: #666;
     }
 
@@ -120,7 +127,13 @@
       border-top: 1px solid #eee;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 980px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
       .navbar {
         padding: 18px 20px;
       }
@@ -142,22 +155,13 @@
         font-size: 16px;
       }
 
-      .member {
-        flex-direction: column;
-        text-align: center;
-        padding: 24px 20px;
+      .team-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
       }
 
-      .member-info h3 {
-        font-size: 28px;
-      }
-
-      .role {
-        font-size: 17px;
-      }
-
-      .desc {
-        font-size: 16px;
+      .member-card h3 {
+        font-size: 24px;
       }
     }
   </style>
@@ -181,59 +185,59 @@
     <p>The people behind SkillBridge’s product, strategy and community vision.</p>
   </section>
 
-  <section class="team-list">
-    <div class="member">
+  <section class="team-grid">
+    <div class="member-card">
       <img src="member1.jpg" alt="Hao Xiong" />
-      <div class="member-info">
-        <h3>Hao Xiong</h3>
-        <p class="role">CEO</p>
-        <p class="desc">Drives strategic development of SkillBridge, building partnerships to grow the platform.</p>
-      </div>
+      <h3>Hao Xiong</h3>
+      <p class="role">CEO (project lead)</p>
+      <p class="desc">
+        Drives strategic development of SkillBridge, building partnerships to grow the platform.
+      </p>
     </div>
 
-    <div class="member">
+    <div class="member-card">
       <img src="member2.jpg" alt="Yi Tan" />
-      <div class="member-info">
-        <h3>Yi Tan</h3>
-        <p class="role">Product Manager</p>
-        <p class="desc">Leads product development and visual storytelling.</p>
-      </div>
+      <h3>Yi Tan</h3>
+      <p class="role">Product Manager</p>
+      <p class="desc">
+        Leads product development and visual storytelling.
+      </p>
     </div>
 
-    <div class="member">
+    <div class="member-card">
       <img src="member3.jpg" alt="Ying Huang" />
-      <div class="member-info">
-        <h3>Ying Huang</h3>
-        <p class="role">Communications Director</p>
-        <p class="desc">Leads content creation, press releases and official communications.</p>
-      </div>
+      <h3>Ying Huang</h3>
+      <p class="role">Communications Director</p>
+      <p class="desc">
+        Leads content creation, press releases and official communications.
+      </p>
     </div>
 
-    <div class="member">
+    <div class="member-card">
       <img src="member4.jpg" alt="Qiaoyun Luo" />
-      <div class="member-info">
-        <h3>Qiaoyun Luo</h3>
-        <p class="role">Strategy Manager</p>
-        <p class="desc">Focuses on market analysis, revenue models and long-term growth strategy.</p>
-      </div>
+      <h3>Qiaoyun Luo</h3>
+      <p class="role">Strategy Manager</p>
+      <p class="desc">
+        Focuses on market analysis, revenue models and long-term growth strategy.
+      </p>
     </div>
 
-    <div class="member">
+    <div class="member-card">
       <img src="member5.jpg" alt="Hanqing Dai" />
-      <div class="member-info">
-        <h3>Hanqing Dai</h3>
-        <p class="role">Product & Community Manager</p>
-        <p class="desc">Designs features and user experience while fostering community engagement.</p>
-      </div>
+      <h3>Hanqing Dai</h3>
+      <p class="role">Product & Community Manager</p>
+      <p class="desc">
+        Designs features and user experience while fostering community engagement.
+      </p>
     </div>
 
-    <div class="member">
+    <div class="member-card">
       <img src="member6.jpg" alt="Xuanxuan Wu" />
-      <div class="member-info">
-        <h3>Xuanxuan Wu</h3>
-        <p class="role">Market Manager</p>
-        <p class="desc">Focused on data analysis, market analysis and competitor comparison.</p>
-      </div>
+      <h3>Xuanxuan Wu</h3>
+      <p class="role">Market Manager</p>
+      <p class="desc">
+        Focused on data analysis, market analysis and competitor comparison.
+      </p>
     </div>
   </section>
 
