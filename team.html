@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>SkillBridge Team</title>
 
 <style>
+*{
+box-sizing:border-box;
+}
 
 body{
 margin:0;
 font-family:Arial, sans-serif;
 background:#f5f5f5;
+color:#222;
 }
-
-/* navbar */
 
 .navbar{
 background:white;
@@ -23,59 +24,78 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:10;
 }
 
 .logo{
 display:flex;
 align-items:center;
 gap:8px;
+text-decoration:none;
+color:#222;
+font-weight:700;
+font-size:20px;
 }
-  
+
 .logo img{
 width:30px;
 height:30px;
 object-fit:contain;
 }
-  
-.navbar a{
+
+.navbar-right a{
 text-decoration:none;
 color:#333;
-margin-left:30px;
+margin-left:28px;
 font-weight:600;
+transition:color 0.2s;
 }
 
-/* title */
+.navbar-right a:hover{
+color:#ff8a00;
+}
+
+.hero{
+text-align:center;
+padding:80px 20px 30px 20px;
+}
 
 .title{
-text-align:center;
-margin:80px 0;
-font-size:40px;
+margin:0;
+font-size:46px;
 }
 
-/* grid */
+.subtitle{
+max-width:760px;
+margin:18px auto 0 auto;
+font-size:18px;
+line-height:1.7;
+color:#666;
+}
 
 .team{
-max-width:1100px;
-margin:auto;
+max-width:1150px;
+margin:40px auto 80px auto;
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:40px;
-padding:40px;
+grid-template-columns:repeat(3, 1fr);
+gap:32px;
+padding:0 30px;
 }
-
-/* card */
 
 .member{
 background:white;
-padding:30px;
-border-radius:12px;
+padding:32px 24px;
+border-radius:18px;
 text-align:center;
 box-shadow:0 8px 20px rgba(0,0,0,0.05);
-transition:transform 0.3s;
+transition:transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .member:hover{
-transform:translateY(-8px);
+transform:translateY(-4px);
+box-shadow:0 12px 24px rgba(0,0,0,0.08);
 }
 
 .member img{
@@ -83,99 +103,156 @@ width:120px;
 height:120px;
 border-radius:50%;
 object-fit:cover;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 .member h3{
-margin:10px 0 5px 0;
+margin:8px 0 6px 0;
+font-size:30px;
 }
 
 .role{
-color:#777;
-font-size:14px;
-margin-bottom:10px;
+font-size:15px;
+font-weight:600;
+color:#ff8a00;
+margin-bottom:14px;
 }
 
 .desc{
-font-size:14px;
-color:#555;
-line-height:1.5;
+font-size:15px;
+line-height:1.7;
+color:#666;
 }
 
+.footer{
+text-align:center;
+padding:28px 20px;
+font-size:14px;
+color:#888;
+background:#fff;
+border-top:1px solid #eee;
+}
+
+@media (max-width: 980px){
+.team{
+grid-template-columns:repeat(2, 1fr);
+}
+}
+
+@media (max-width: 640px){
+.navbar{
+padding:18px 20px;
+}
+
+.logo{
+font-size:18px;
+}
+
+.navbar-right a{
+margin-left:16px;
+font-size:14px;
+}
+
+.title{
+font-size:36px;
+}
+
+.subtitle{
+font-size:16px;
+}
+
+.team{
+grid-template-columns:1fr;
+padding:0 20px;
+}
+}
 </style>
 </head>
 
 <body>
 
 <div class="navbar">
-<div class="logo">
-<img src="5709icon.png">
-<strong>SkillBridge</strong></div>
-<div>
-<a href="index.html">Home</a>
-<a href="team.html">Team</a>
-</div>
+  <a href="index.html" class="logo">
+    <img src="5709icon.png" alt="SkillBridge logo">
+    <span>SkillBridge</span>
+  </a>
+
+  <div class="navbar-right">
+    <a href="index.html">Home</a>
+    <a href="team.html">Team</a>
+  </div>
 </div>
 
-<h1 class="title">Meet the Team</h1>
+<section class="hero">
+  <h1 class="title">Meet the Team</h1>
+  <p class="subtitle">
+    The people behind SkillBridge’s product, strategy and community vision.
+  </p>
+</section>
 
-<div class="team">
+<section class="team">
 
-<div class="member">
-<img src="member1.jpg">
-<h3>Hao Xiong</h3>
-<div class="role">CEO </div>
-<div class="desc">
-Strategic analysis, business development and project coordination.
-</div>
-</div>
+  <div class="member">
+    <img src="member1.jpg" alt="Hao Xiong">
+    <h3>Hao Xiong</h3>
+    <div class="role">CEO (Project Lead)</div>
+    <div class="desc">
+      Skilled in strategic analysis, business development and project coordination.
+    </div>
+  </div>
 
-<div class="member">
-<img src="member2.jpg">
-<h3>Yi Tan</h3>
-<div class="role">Product Manager</div>
-<div class="desc">
-Leads product development and visual storytelling.
-</div>
-</div>
+  <div class="member">
+    <img src="member2.jpg" alt="Yi Tan">
+    <h3>Yi Tan</h3>
+    <div class="role">Product Manager</div>
+    <div class="desc">
+      Skilled in technology platform development and security.
+    </div>
+  </div>
 
-<div class="member">
-<img src="member3.jpg">
-<h3>Ying Huang</h3>
-<div class="role">Communications Director</div>
-<div class="desc">
-Copywriting, news release and official document drafting.
-</div>
-</div>
+  <div class="member">
+    <img src="member3.jpg" alt="Ying Huang">
+    <h3>Ying Huang</h3>
+    <div class="role">Communications Director</div>
+    <div class="desc">
+      Skilled in copywriting, news release and official document drafting.
+    </div>
+  </div>
 
-<div class="member">
-<img src="member4.jpg">
-<h3>Qiaoyun Luo</h3>
-<div class="role">Strategy Manager</div>
-<div class="desc">
-Long-term company planning, market size forecasting and revenue growth strategy.
-</div>
-</div>
+  <div class="member">
+    <img src="member4.jpg" alt="Qiaoyun Luo">
+    <h3>Qiaoyun Luo</h3>
+    <div class="role">Strategy Manager</div>
+    <div class="desc">
+      Focused on long-term company development planning, market size forecasting,
+      revenue models and growth strategy.
+    </div>
+  </div>
 
-<div class="member">
-<img src="member5.jpg">
-<h3>Hanqing Dai</h3>
-<div class="role">Product & Community Manager</div>
-<div class="desc">
-Platform feature design, UX design, user management and community engagement.
-</div>
-</div>
+  <div class="member">
+    <img src="member5.jpg" alt="Hanqing Dai">
+    <h3>Hanqing Dai</h3>
+    <div class="role">Product & Community Manager</div>
+    <div class="desc">
+      Responsible for platform feature design, user experience design, user
+      management, community engagement and organising platform activities.
+    </div>
+  </div>
 
-<div class="member">
-<img src="member6.jpg">
-<h3>Xuanxuan Wu</h3>
-<div class="role">Market Manager</div>
-<div class="desc">
-Data analysis, market analysis and competitor comparison.
-</div>
-</div>
+  <div class="member">
+    <img src="member6.jpg" alt="Xuanxuan Wu">
+    <h3>Xuanxuan Wu</h3>
+    <div class="role">Market Manager</div>
+    <div class="desc">
+      Focused on data analysis, market analysis and competitor comparison.
+    </div>
+  </div>
 
-</div>
+</section>
+
+<footer class="footer">
+  © 2026 SkillBridge · Built for skill exchange.
+</footer>
 
 </body>
 </html>
