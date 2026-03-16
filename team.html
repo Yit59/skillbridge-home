@@ -1,179 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillBridge Team</title>
 
-<title>SkillBridge Team</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
 
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#f5f5f5;
-}
+    .navbar {
+      background: white;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
 
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #222;
+      font-weight: 700;
+      font-size: 20px;
+    }
 
-.logo img{
-width:32px;
-height:32px;
-}
-/* navbar */
+    .logo img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
 
-.navbar{
-background:white;
-padding:20px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
+    .navbar-right a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 28px;
+      font-weight: 600;
+    }
 
-.navbar a{
-text-decoration:none;
-color:#333;
-margin-left:30px;
-font-weight:600;
-}
+    .hero {
+      text-align: center;
+      padding: 70px 20px 30px;
+    }
 
-/* title */
+    .hero h1 {
+      margin: 0;
+      font-size: 42px;
+    }
 
-.title{
-text-align:center;
-margin:80px 0;
-font-size:40px;
-}
+    .hero p {
+      margin: 16px auto 0;
+      max-width: 720px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #666;
+    }
 
-/* grid */
+    .team-list {
+      max-width: 1000px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+    }
 
-.team{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:40px;
-padding:40px;
-}
+    .member {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      background: white;
+      border-radius: 18px;
+      padding: 28px 32px;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
 
-/* card */
+    .member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
 
-.member{
-background:white;
-padding:30px;
-border-radius:12px;
-text-align:center;
-box-shadow:0 8px 20px rgba(0,0,0,0.05);
-transition:transform 0.3s;
-}
+    .member-info h3 {
+      margin: 0 0 8px;
+      font-size: 30px;
+    }
 
-.member:hover{
-transform:translateY(-8px);
-}
+    .role {
+      margin: 0 0 12px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #ff8a00;
+    }
 
-.member img{
-width:120px;
-height:120px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:20px;
-}
+    .desc {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #666;
+    }
 
-.member h3{
-margin:10px 0 5px 0;
-}
+    .footer {
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 14px;
+      color: #888;
+      background: #fff;
+      border-top: 1px solid #eee;
+    }
 
-.role{
-color:#777;
-font-size:14px;
-margin-bottom:10px;
-}
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 18px 20px;
+      }
 
-.desc{
-font-size:14px;
-color:#555;
-line-height:1.5;
-}
+      .logo {
+        font-size: 18px;
+      }
 
-</style>
+      .navbar-right a {
+        margin-left: 16px;
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .member {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+      }
+
+      .member-info h3 {
+        font-size: 28px;
+      }
+
+      .role {
+        font-size: 17px;
+      }
+
+      .desc {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="navbar">
+    <a href="index.html" class="logo">
+      <img src="5709icon.png" alt="SkillBridge logo" />
+      <span>SkillBridge</span>
+    </a>
 
-<div class="navbar">
-<div class="logo">
-<img src="5709icon.png">
-<div><strong>SkillBridge</strong></div>
-<div>
-<a href="index.html">Home</a>
-<a href="team.html">Team</a>
-</div>
-</div>
+    <div class="navbar-right">
+      <a href="index.html">Home</a>
+      <a href="team.html">Team</a>
+    </div>
+  </div>
 
-<h1 class="title">Meet the Team</h1>
+  <section class="hero">
+    <h1>Meet the Team</h1>
+    <p>The people behind SkillBridge’s product, strategy and community vision.</p>
+  </section>
 
-<div class="team">
+  <section class="team-list">
+    <div class="member">
+      <img src="member1.jpg" alt="Hao Xiong" />
+      <div class="member-info">
+        <h3>Hao Xiong</h3>
+        <p class="role">CEO</p>
+        <p class="desc">Drives strategic development of SkillBridge, building partnerships to grow the platform.</p>
+      </div>
+    </div>
 
-<div class="member">
-<img src="member1.jpg">
-<h3>Hao Xiong</h3>
-<div class="role">CEO</div>
-<div class="desc">
-Strategic analysis, business development and project coordination.
-</div>
-</div>
+    <div class="member">
+      <img src="member2.jpg" alt="Yi Tan" />
+      <div class="member-info">
+        <h3>Yi Tan</h3>
+        <p class="role">Product Manager</p>
+        <p class="desc">Leads product development and visual storytelling.</p>
+      </div>
+    </div>
 
-<div class="member">
-<img src="member2.jpg">
-<h3>Yi Tan</h3>
-<div class="role">Product Manager</div>
-<div class="desc">
-Leads product development and visual storytelling.
-</div>
-</div>
+    <div class="member">
+      <img src="member3.jpg" alt="Ying Huang" />
+      <div class="member-info">
+        <h3>Ying Huang</h3>
+        <p class="role">Communications Director</p>
+        <p class="desc">Leads content creation, press releases and official communications.</p>
+      </div>
+    </div>
 
-<div class="member">
-<img src="member3.jpg">
-<h3>Ying Huang</h3>
-<div class="role">Communications Director</div>
-<div class="desc">
-Copywriting, news release and official document drafting.
-</div>
-</div>
+    <div class="member">
+      <img src="member4.jpg" alt="Qiaoyun Luo" />
+      <div class="member-info">
+        <h3>Qiaoyun Luo</h3>
+        <p class="role">Strategy Manager</p>
+        <p class="desc">Focuses on market analysis, revenue models and long-term growth strategy.</p>
+      </div>
+    </div>
 
-<div class="member">
-<img src="member4.jpg">
-<h3>Qiaoyun Luo</h3>
-<div class="role">Strategy Manager</div>
-<div class="desc">
-Long-term company planning, market size forecasting and revenue growth strategy.
-</div>
-</div>
+    <div class="member">
+      <img src="member5.jpg" alt="Hanqing Dai" />
+      <div class="member-info">
+        <h3>Hanqing Dai</h3>
+        <p class="role">Product & Community Manager</p>
+        <p class="desc">Designs features and user experience while fostering community engagement.</p>
+      </div>
+    </div>
 
-<div class="member">
-<img src="member5.jpg">
-<h3>Hanqing Dai</h3>
-<div class="role">Product & Community Manager</div>
-<div class="desc">
-Platform feature design, UX design, user management and community engagement.
-</div>
-</div>
+    <div class="member">
+      <img src="member6.jpg" alt="Xuanxuan Wu" />
+      <div class="member-info">
+        <h3>Xuanxuan Wu</h3>
+        <p class="role">Market Manager</p>
+        <p class="desc">Focused on data analysis, market analysis and competitor comparison.</p>
+      </div>
+    </div>
+  </section>
 
-<div class="member">
-<img src="member6.jpg">
-<h3>Xuanxuan Wu</h3>
-<div class="role">Market Manager</div>
-<div class="desc">
-Data analysis, market analysis and competitor comparison.
-</div>
-</div>
-
-</div>
-
+  <footer class="footer">
+    © 2026 SkillBridge · Built for skill exchange.
+  </footer>
 </body>
 </html>
